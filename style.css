@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    background-color: #73C1D4; /* Blueberry */
+    color: #6C327A; /* Grape */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6C327A; /* Grape */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #6C327A; /* Grape */
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #5A235F; /* Darker shade of Grape */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #6C327A; /* Grape */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Fizzy animation for buttons */
+.fizzy-button {
+    background-color: #B19CD9; /* Lavender */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: fizz 1s infinite alternate;
+}
+
+@keyframes fizz {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}

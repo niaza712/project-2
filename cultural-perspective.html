@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cultural Perspective on LaCroix</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS styles for the background image */
+        body {
+            background-image: url('/Users/amal/Desktop/testrepo/cclab s24/week4/images/website/backg1.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* CSS styles for the text box */
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.7); /* Light blue background with 70% opacity */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto; /* Center the text box horizontally */
+            max-width: 600px;
+            text-align: center; /* Center align the text */
+        }
+
+        /* CSS styles for the colorful circles animation */
+        .circle-animation {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7); /* Light blue background with 70% opacity */
+            animation: circleAnimation 3s ease infinite;
+        }
+
+        @keyframes circleAnimation {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        /* CSS styles for the button */
+        button {
+            display: block; /* Make the button a block element */
+            margin: 0 auto; /* Center the button horizontally */
+            padding: 10px 20px; /* Add padding to the button */
+            background-color: #553c8b; /* Purple background color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+
+        button:hover {
+            background-color: #301c4d; /* Darker purple background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="social-perspective.html">Social Perspective</a></li>
+                <li><a href="cultural-perspective.html">Cultural Perspective</a></li>
+                <li><a href="historical-perspective.html">Historical Perspective</a></li>
+                <li><a href="artistic-perspective.html">Artistic Perspective</a></li>
+                <li><a href="personal-perspective.html">Personal Perspective</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="text-box">
+            <h1>The Influence of LaCroix on Pop Culture</h1>
+            <p>LaCroix has transcended its status as a mere beverage to become a cultural icon. From its presence at trendy brunch spots to its appearance in pop culture references, LaCroix has firmly established itself as a symbol of sophistication and modernity.</p>
+            <p>Its vibrant packaging and diverse flavor offerings have made it a staple at social gatherings and events, where it adds a touch of flair to any occasion. Whether it's enjoyed at a rooftop party or featured in a social media post, LaCroix has become synonymous with style and elegance.</p>
+            <p>As the cultural landscape continues to evolve, LaCroix remains at the forefront, shaping trends and influencing consumer preferences. Its impact on popular culture is undeniable, and its legacy is sure to endure for years to come.</p>
+        </div>
+
+        <!-- Container for the colorful circles animation -->
+        <div class="circle-animation"></div>
+        
+        <!-- Button to trigger the mouse press animation -->
+        <button onclick="createCircle()">Press Me</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LaCroix Enthusiast. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for creating colorful circles on mouse press
+        function createCircle() {
+            const circleAnimation = document.querySelector('.circle-animation');
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circleAnimation.appendChild(circle);
+            setTimeout(function() {
+                circle.remove();
+            }, 3000); // Remove the circle after 3 seconds
+        }
+    </script>
+</body>
+</html>

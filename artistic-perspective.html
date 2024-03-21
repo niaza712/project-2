@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Artistic Perspective on LaCroix</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* CSS styles for the text box */
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.7); /* Light blue background with 70% opacity */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto; /* Center the text box horizontally */
+            max-width: 600px;
+            text-align: center; /* Center align the text */
+        }
+
+        /* CSS styles for the images */
+        .centered-image {
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+        }
+
+        /* CSS styles for the animated button */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #553c8b; /* Purple color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #301c4d; /* Darker purple on hover */
+        }
+
+        /* CSS styles for the animated bubbles */
+        .bubble {
+            width: 20px;
+            height: 20px;
+            background-color: #9bdaf1; /* Light blue color */
+            border-radius: 50%;
+            position: absolute;
+            animation: bubbleAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="social-perspective.html">Social Perspective</a></li>
+                <li><a href="cultural-perspective.html">Cultural Perspective</a></li>
+                <li><a href="historical-perspective.html">Historical Perspective</a></li>
+                <li><a href="artistic-perspective.html">Artistic Perspective</a></li>
+                <li><a href="personal-perspective.html">Personal Perspective</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>The Artistry of LaCroix</h1>
+        <p>LaCroix isn't just a beverage; it's a work of art. From its eye-catching can designs to its vibrant color palette, every aspect of LaCroix is crafted with creativity and care.</p>
+        <p>The bold, abstract patterns adorning each can reflect the dynamic flavors contained within, enticing consumers with their visual appeal. Whether it's the playful swirls of Berry or the sophisticated elegance of Pamplemousse, LaCroix cans are a feast for the eyes as well as the taste buds.</p>
+        <p>Beyond its packaging, LaCroix inspires artists of all kinds to explore its essence through various mediums. From paintings and illustrations to photography and sculpture, the possibilities are endless when it comes to capturing the essence of LaCroix.</p>
+
+        <!-- Centered images -->
+        <img src="/Users/amal/Desktop/testrepo/cclab s24/week4/moreimages/lacroix/embriodery.jpg" alt="Embroidery Art" class="centered-image">
+        <img src="/Users/amal/Desktop/testrepo/cclab s24/week4/moreimages/lacroix/plane.jpg" alt="Plane Art" class="centered-image">
+
+        <!-- Animated button -->
+        <div class="button-container">
+            <button class="button" onclick="createBubbles()">Press Me</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LaCroix Enthusiast. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for creating animated bubbles -->
+    <script>
+        function createBubbles() {
+            const button = document.querySelector('.button');
+            const buttonPosition = button.getBoundingClientRect();
+            const container = document.querySelector('.button-container');
+
+            // Create and append bubble elements
+            for (let i = 0; i < 5; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.left = `${buttonPosition.left + (button.offsetWidth / 2)}px`; // Center horizontally
+                bubble.style.top = `${buttonPosition.top + (button.offsetHeight / 2)}px`; // Center vertically
+                container.appendChild(bubble);
+
+                // Remove bubble after animation ends
+                bubble.addEventListener('animationend', () => {
+                    bubble.remove();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+

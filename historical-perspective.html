@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Artistic Perspective on LaCroix</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes moveRight {
+            0% { left: 0; }
+            100% { left: 100%; }
+        }
+
+        @keyframes moveLeft {
+            0% { right: 0; }
+            100% { right: 100%; }
+        }
+
+        .moving-image {
+            position: relative;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .moving-image img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .move-right {
+            animation-name: moveRight;
+        }
+
+        .move-left {
+            animation-name: moveLeft;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="social-perspective.html">Social Perspective</a></li>
+                <li><a href="cultural-perspective.html">Cultural Perspective</a></li>
+                <li><a href="historical-perspective.html">Historical Perspective</a></li>
+                <li><a href="artistic-perspective.html">Artistic Perspective</a></li>
+                <li><a href="personal-perspective.html">Personal Perspective</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>The Artistry of LaCroix</h1>
+        <p>LaCroix isn't just a beverage; it's a work of art. From its eye-catching can designs to its vibrant color palette, every aspect of LaCroix is crafted with creativity and care.</p>
+        <p>The bold, abstract patterns adorning each can reflect the dynamic flavors contained within, enticing consumers with their visual appeal. Whether it's the playful swirls of Berry or the sophisticated elegance of Pamplemousse, LaCroix cans are a feast for the eyes as well as the taste buds.</p>
+        <p>Beyond its packaging, LaCroix inspires artists of all kinds to explore its essence through various mediums. From paintings and illustrations to photography and sculpture, the possibilities are endless when it comes to capturing the essence of LaCroix.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LaCroix Enthusiast. All rights reserved.</p>
+    </footer>
+
+    <!-- Add moving images -->
+    <div class="moving-image move-right">
+        <img src="/Users/amal/Desktop/testrepo/cclab s24/week4/moreimages/lacroix/cap.jpg" alt="Cap Image">
+    </div>
+    <div class="moving-image move-left">
+        <img src="/Users/amal/Desktop/testrepo/cclab s24/week4/images/website/book.jpg" alt="Book Image">
+    </div>
+    <div class="moving-image move-right">
+        <img src="/Users/amal/Desktop/testrepo/cclab s24/week4/images/website/backg.jpg" alt="Background Image">
+    </div>
+</body>
+</html>

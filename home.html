@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - LaCroix Enthusiast</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS styles for the sand image */
+        .sand-image {
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            position: relative;
+            animation: bubble 2s infinite alternate; /* Apply the bubble animation */
+            transition: transform 0.3s ease; /* Apply transition for movement */
+        }
+
+        /* Keyframes for the bubble animation */
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="social-perspective.html">Social Perspective</a></li>
+                <li><a href="cultural-perspective.html">Cultural Perspective</a></li>
+                <li><a href="historical-perspective.html">Historical Perspective</a></li>
+                <li><a href="artistic-perspective.html">Artistic Perspective</a></li>
+                <li><a href="personal-perspective.html">Personal Perspective</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Welcome to LaCroix Enthusiast!</h1>
+        <p>Indulge in the world of LaCroix, where every sip is a burst of refreshing flavor and fizzy goodness. Explore our collection of articles, reviews, and insider tips dedicated to the sparkling sensation that is LaCroix. Join our community of enthusiasts and share your love for this beloved beverage!</p>
+        <p>Whether you're a seasoned connoisseur or just discovering the joy of LaCroix, there's something here for everyone. So grab your favorite flavor, sit back, and enjoy the bubbly bliss of LaCroix!</p>
+        
+        <!-- Add the sand image with a specific class -->
+        <img src="images/website/sand.jpg" alt="Sand Image" class="sand-image">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LaCroix Enthusiast. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for the image movement -->
+    <script>
+        // JavaScript for the sand image movement
+        const sandImage = document.querySelector('.sand-image');
+
+        sandImage.addEventListener('mousemove', (e) => {
+            const xPos = (e.clientX / window.innerWidth) - 0.5; // Calculate position relative to the center of the image
+            const yPos = (e.clientY / window.innerHeight) - 0.5;
+
+            sandImage.style.transform = `translate(${xPos * 20}px, ${yPos * 20}px)`; // Move the image based on mouse position
+        });
+
+        sandImage.addEventListener('mouseleave', () => {
+            sandImage.style.transform = 'translate(0, 0)'; // Reset image position when mouse leaves
+        });
+    </script>
+</body>
+</html>
+
+
